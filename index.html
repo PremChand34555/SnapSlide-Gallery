@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapSlide - Responsive Image Gallery</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .slide {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .slider-container {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="container mx-auto max-w-4xl">
+        <h1 class="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-6">SnapSlide Gallery</h1>
+        
+        <!-- Slider Container -->
+        <div class="slider-container bg-white rounded-lg shadow-lg overflow-hidden">
+            <div id="slider" class="relative w-full h-full">
+                <!-- Slides will be inserted here by JavaScript -->
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 p-3 rounded-full shadow-md z-10 transition">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 p-3 rounded-full shadow-md z-10 transition">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Indicators -->
+            <div id="indicators" class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-10">
+                <!-- Indicators will be inserted here by JavaScript -->
+            </div>
+        </div>
+        
+        <!-- Controls -->
+        <div class="mt-6 flex justify-center space-x-4">
+            <button id="playPauseBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition flex items-center">
+                <i class="fas fa-pause mr-2"></i> <span id="playPauseText">Pause</span>
+            </button>
+            <button id="fullscreenBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition flex items-center">
+                <i class="fas fa-expand mr-2"></i> Fullscreen
+            </button>
+        </div>
+    </div>
+    
+    <footer class="mt-12 text-center text-gray-500">
+        <p>SnapSlide Gallery &copy; 2023 | Made with Prem Chand</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
