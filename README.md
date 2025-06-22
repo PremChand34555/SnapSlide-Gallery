@@ -2,7 +2,8 @@
 
 SnapSlide is a lightweight, responsive image gallery/slider built with vanilla JavaScript and styled with Tailwind CSS. It features automatic slide transitions, navigation controls, and a clean, modern design.
 
-![SnapSlide Preview](https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=SnapSlide+Gallery)
+![SnapSlide Preview]![image](https://github.com/user-attachments/assets/dae6e122-58c9-46b8-9d15-c1f8251855e6)
+)
 
 ## Features
 
